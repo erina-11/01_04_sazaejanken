@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/sazae.css">
+    <title>サザエさんとジャンケン</title>
+</head>
+
+<body>
+    <div>
+        <h1>サザエさんとジャンケン</h1>
+        <img src="img/sazae_janken_kamae.png" id="sazae_kekka">
+    </div>
+    <main>
+        <ul>
+            <li id="gu_btn">グー</li>
+            <li id="cho_btn">チョキ</li>
+            <li id="par_btn">パー</li>
+        </ul>
+        <div id="com_hand">コンピュータの出した手は？</div>
+        <div id="judgment">結果は？</div>
+        <!-- オープニング画像 -->
+        <!-- <img class="opening" src="https://yahoo.jp/0bm-qP"> -->
+
+    </main>
+
+    <footer>フッター</footer>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+        $(function () {
+            const result = ['グー', 'チョキ', 'パー'];
+
+            $('#gu_btn').on('click', function () {
+                document.getElementById('sazae_kekka').src = 'img/sazae_gu.png';
+                // document.getElementById('janken').src = 'images/gu.jpg'
+
+                //自分の手はグー
+                let rand = Math.floor(Math.random() * 3);
+                //0コンピュータグー　1コンピュータチョキ　2コンピュータパー
+                //コンピュータの手を表示
+                $('#com_hand').text('コンピュータの手：' + result[rand]);
+                if (rand == 0) {
+                    $('#judgment').text('あいこ');
+
+
+                    $('#sazae_kekka').src = 'img/sazae_gu.png';
+
+
+
+                } else if (rand == 1) {
+                    $('#judgment').text('勝ち');
+                } else {
+                    $('#judgment').text('負け');
+                }
+            });
+
+            $('#cho_btn').on('click', function () {
+                //自分の手はチョキ
+                let rand = Math.floor(Math.random() * 3);
+                //0コンピュータグー　1コンピュータチョキ　2コンピュータパー
+                //コンピュータの手を表示
+                $('#com_hand').text('コンピュータの手：' + result[rand]);
+                if (rand == 0) {
+                    $('#judgment').text('負け');
+                } else if (rand == 1) {
+                    $('#judgment').text('あいこ');
+                } else {
+                    $('#judgment').text('勝ち');
+                }
+            });
+
+            $('#par_btn').on('click', function () {
+                //自分の手はパー
+                let rand = Math.floor(Math.random() * 3);
+                //0コンピュータグー　1コンピュータチョキ　2コンピュータパー
+                //コンピュータの手を表示
+                $('#com_hand').text('コンピュータの手：' + result[rand]);
+                if (rand == 0) {
+                    $('#judgment').text('勝ち');
+                } else if (rand == 1) {
+                    $('#judgment').text('負け');
+                } else {
+                    $('#judgment').text('あいこ');
+                }
+            });
+
+        });
+
+
+    </script>
+
+
+</body>
+
+</html>
