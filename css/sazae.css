@@ -12,6 +12,10 @@ header{
 main{
     border-bottom:1px solid #ccc;
 }
+#sazae_kekka{
+    width: 600px;
+    height: 400px;
+}   
 footer{
     background-color: #fff;
     border-bottom:1px solid #ccc;

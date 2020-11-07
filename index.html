@@ -36,7 +36,6 @@
 
             $('#gu_btn').on('click', function () {
                 document.getElementById('sazae_kekka').src = 'img/sazae_gu.png';
-                // document.getElementById('janken').src = 'images/gu.jpg'
 
                 //自分の手はグー
                 let rand = Math.floor(Math.random() * 3);
@@ -59,6 +58,7 @@
             });
 
             $('#cho_btn').on('click', function () {
+                document.getElementById('sazae_kekka').src = 'img/sazae_choki.png';
                 //自分の手はチョキ
                 let rand = Math.floor(Math.random() * 3);
                 //0コンピュータグー　1コンピュータチョキ　2コンピュータパー
@@ -74,6 +74,7 @@
             });
 
             $('#par_btn').on('click', function () {
+                document.getElementById('sazae_kekka').src = 'img/sazae_pa.png';
                 //自分の手はパー
                 let rand = Math.floor(Math.random() * 3);
                 //0コンピュータグー　1コンピュータチョキ　2コンピュータパー
