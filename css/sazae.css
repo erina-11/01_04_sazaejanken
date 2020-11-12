@@ -5,12 +5,15 @@ body{
     font-size: 32px;
 }
 header{
-    background-color: #fff;
+    background-color: yellow;
     border-bottom: 1px solid #ccc;
     text-align: center;
 }
 main{
     border-bottom:1px solid #ccc;
+}
+.title{
+    background-color: #yellow;
 }
 #sazae_kekka{
     width: 600px;
