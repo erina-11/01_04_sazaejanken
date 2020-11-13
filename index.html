@@ -21,13 +21,9 @@
         </ul>
         <div id="com_hand">コンピュータの出した手は？</div>
         <div id="judgment">結果は？</div>
-        <!-- オープニング画像 -->
-        <!-- <img class="opening" src="https://yahoo.jp/0bm-qP"> -->
-
     </main>
 
     <footer>フッター</footer>
-
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script>
@@ -36,7 +32,6 @@
 
             $('#gu_btn').on('click', function () {
                 document.getElementById('sazae_kekka').src = 'img/sazae_gu.png';
-
                 //自分の手はグー
                 let rand = Math.floor(Math.random() * 3);
                 //0コンピュータグー　1コンピュータチョキ　2コンピュータパー
@@ -44,11 +39,6 @@
                 $('#com_hand').text('コンピュータの手：' + result[rand]);
                 if (rand == 0) {
                     $('#judgment').text('あいこ');
-
-
-                    $('#sazae_kekka').src = 'img/sazae_gu.png';
-
-
 
                 } else if (rand == 1) {
                     $('#judgment').text('勝ち');
